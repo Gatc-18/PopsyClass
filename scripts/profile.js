@@ -1,3 +1,4 @@
+import DeleteData from "../helpers/deleteData.js";
 import PutData from "../helpers/putData.js";
 import { USER } from "../helpers/urls.js";
 
@@ -7,6 +8,7 @@ let inputPassword = document.getElementById('password');
 let btnEdit = document.getElementById('editar');
 let btnSave = document.getElementById('guardar');
 let form = document.querySelector('form');
+let btnDelete = document.getElementById('eliminar');
 let infoUser;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     inputName.value = name;
     inputEmail.value = email;
     inputPassword.value = password;
+
+    btnDelete.setAttribute('id', id);
 })
 
 btnEdit.addEventListener('click', () => {
@@ -49,5 +53,20 @@ form.addEventListener('submit', async (e) => {
     
 
     await PutData(url, newInfoUser)
+
+})
+
+btnDelete.addEventListener('dblclick', (e) => {
+    e.preventDefault();
+    let id = e.target.id;
+
+    let url = `${USER}/${id}`
+
+  DeleteData(url)
+  .then(() => {
+    window.location.href = '../index.html';
+  })
+
+ 
 
 })

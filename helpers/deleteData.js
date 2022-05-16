@@ -1,16 +1,14 @@
-const PostData = async (url, object = {}) => {
+const DeleteData = async (url, object = {}) => {
 
     try {
         let res = await fetch(url, {
-            method: 'POST',
-            body: JSON.stringify(object),
+            method: 'DELETE',
             headers: {
                 "Content-type": "application/json; charset=utf-8"
             }
         })
 
-        let data = await res.json();
-        alert("Información creada")
+       alert("Informacion eliminada")
     } catch (error) {
         alert("Hubo un error", error)
     }
@@ -18,4 +16,4 @@ const PostData = async (url, object = {}) => {
 
 }
 
-export default PostData;
+export default DeleteData;

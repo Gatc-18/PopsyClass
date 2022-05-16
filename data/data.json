@@ -271,19 +271,6 @@
       "categorie": "leche"
     }
   ],
-  "Usuarios": [
-    {
-      "name": "Gustavo Armando Tovar",
-      "email": "gustavoTovar@gmail.com",
-      "password": "898949498",
-      "id": "4dba0d52-4c72-4542-a1f8-12d1da775207"
-    },
-    {
-      "id": "d79c2fcd-e782-491f-a743-4412e4b01b7d",
-      "name": "Maria",
-      "email": "maria@gmail.com",
-      "password": "ihfweifefew"
-    }
-  ],
+  "Usuarios": [],
   "Favoritos": []
 }
