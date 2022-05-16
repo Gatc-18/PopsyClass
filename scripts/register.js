@@ -1,4 +1,5 @@
 import PostData from "../helpers/postData.js";
+import { USER } from "../helpers/urls.js";
 
 const form = document.querySelector('form');
 
@@ -17,6 +18,6 @@ form.addEventListener('submit', async (e) => {
         password
     }
 
-  await PostData("http://localhost:3000/Usuarios", infoUser);
+  await PostData(USER, infoUser);
 
 })

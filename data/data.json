@@ -277,6 +277,12 @@
       "name": "Gustavo",
       "email": "gustavo@gmail.com",
       "password": "123456789"
+    },
+    {
+      "id": "d79c2fcd-e782-491f-a743-4412e4b01b7d",
+      "name": "Maria",
+      "email": "maria@gmail.com",
+      "password": "ihfweifefew"
     }
   ],
   "Favoritos": []
