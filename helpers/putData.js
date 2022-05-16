@@ -1,8 +1,8 @@
-const PostData = async (url, object = {}, meth) => {
+const PutData = async (url, object = {}) => {
 
     try {
         let res = await fetch(url, {
-            method: meth,
+            method: 'PUT',
             body: JSON.stringify(object),
             headers: {
                 "Content-type": "application/json; charset=utf-8"
@@ -10,7 +10,7 @@ const PostData = async (url, object = {}, meth) => {
         })
 
         let data = await res.json();
-        alert("Información creada")
+        alert("Información actualizada")
     } catch (error) {
         alert("Hubo un error", error)
     }
@@ -18,4 +18,4 @@ const PostData = async (url, object = {}, meth) => {
 
 }
 
-export default PostData;
+export default PutData;
